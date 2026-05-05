@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIO（AI検索最適化）対策・実装サービス | simpleA</title>
+  <meta name="description" content="AIに引用されない企業は消費者に見つかりにくくなってきました。各業界でのAI引用状況の診断から対策立案・実行までをサポートします。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD 構造化データ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://simplea.cc/#organization",
+        "name": "株式会社simpleA",
+        "alternateName": "simpleA Inc.",
+        "url": "https://simplea.cc/",
+        "logo": "https://simplea.cc/profile2.png",
+        "description": "AIシステムの研究・開発・導入支援、ヘルスケアおよびインフラ分野におけるDXコンサルティング、Webアプリケーション開発を手がけるIT企業。AIO（AI検索最適化）対策の実装支援も提供。",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "JP",
+          "addressRegion": "静岡県",
+          "addressLocality": "浜松市天竜区",
+          "postalCode": "431-4102",
+          "streetAddress": "水窪町地頭方1200-2"
+        },
+        "knowsAbout": [
+          "AIO（AI検索最適化）",
+          "構造化データ実装",
+          "AIに引用されるコンテンツ設計",
+          "研究資産のデジタル公開",
+          "採用広報コンテンツ最適化",
+          "工務店・住宅業界のデジタルマーケティング"
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://simplea.cc/aio.html",
+        "url": "https://simplea.cc/aio.html",
+        "name": "AIO（AI検索最適化）対策・実装サービス | simpleA",
+        "description": "消費者がAIに相談する時代に、AIに引用・推薦される企業になるための対策。研究・食品・製薬業界、住宅・工務店業界、採用・HR分野に特化したAIOサポートを提供。",
+        "inLanguage": "ja",
+        "isPartOf": { "@id": "https://simplea.cc/" },
+        "publisher": { "@id": "https://simplea.cc/#organization" }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://simplea.cc/aio.html#aio-service",
+        "name": "AIO（AI検索最適化）対策・実装サービス",
+        "alternateName": "AI Search Optimization Service",
+        "description": "WEB検索からAI相談へと消費者の情報収集が変化する中、各業界でAIに引用・推薦される企業になるための診断・対策立案・コンテンツ構造化・実装支援を提供するサービス。",
+        "provider": { "@id": "https://simplea.cc/#organization" },
+        "url": "https://simplea.cc/aio.html",
+        "serviceType": "AIOコンサルティング",
+        "areaServed": {
+          "@type": "Country",
+          "name": "日本"
+        },
+        "audience": {
+          "@type": "Audience",
+          "audienceType": "食品メーカー、製薬企業、研究機関、住宅会社、工務店、採用広報担当企業"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "業界別AIOサポートメニュー",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "@id": "https://simplea.cc/aio.html#research-aio",
+                "name": "研究資産AIOサポート",
+                "description": "食品メーカー・製薬企業・研究機関が保有する論文・研究資産を構造化し、AIが正確に引用できる企業サイトへ整備。ハルシネーションリスクを専門家監修で最小化します。機能性食品原料・特殊培地・臨床試験データなどをAIに正しく引用させたい企業向け。",
+                "serviceType": "研究資産AIO対策",
+                "audience": {
+                  "@type": "Audience",
+                  "audienceType": "食品メーカー、製薬企業、機能性素材メーカー、研究機関、バイオベンチャー"
+                }
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "@id": "https://simplea.cc/aio.html#housing-aio",
+                "name": "工務店AIOサポート",
+                "description": "家づくりを検討している施主がAIに相談するリアルな質問データを活用し、AIに推薦される工務店になるためのコンテンツ整備・構造化を支援。広告費を削減しながら、予算・スタイル・家族構成がマッチする顧客との高精度マッチングを実現。",
+                "serviceType": "住宅・工務店AIO対策",
+                "audience": {
+                  "@type": "Audience",
+                  "audienceType": "工務店、ハウスビルダー、注文住宅会社、リノベーション会社"
+                }
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "@id": "https://simplea.cc/aio.html#recruit-aio",
+                "name": "採用広報AIOサポート",
+                "description": "就活生の約67%がAIに就活相談をしている今、AIに紹介される求人企業になるための採用コンテンツ整備・構造化を支援。就活生がAIに投げかけるリアルな質問を独自収集・分析し、採用競合に差をつけるコンテンツ設計を提供。",
+                "serviceType": "採用広報AIO対策",
+                "audience": {
+                  "@type": "Audience",
+                  "audienceType": "採用担当者、人事部門、中小企業経営者、採用広報担当"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://simplea.cc/aio.html#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "AIO（AI検索最適化）とは何ですか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "AIO（AI Search Optimization）とは、ChatGPTやPerplexityなどのAIが企業や製品を紹介・引用する際に、自社が正確かつ優先的に取り上げられるよう最適化する取り組みです。従来のSEO（検索エンジン最適化）が検索順位を上げることを目的としていたのに対し、AIOはAIによる回答の中で自社が推薦されることを目指します。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "研究資産をAI向けに整備するとはどういうことですか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "論文PDFやリンクをWEBサイトに置くだけではAIは内容を正確に読み取れません。論文の結論・作用機序・対象（ヒト試験か動物実験か）などを構造化データとしてマークアップし、自社製品との関連づけを明確にすることで、AIが正確に引用できる状態にします。専門家監修によりハルシネーション（誤引用）リスクを最小化します。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "工務店がAIO対策をすると、広告費を削減できますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "はい。施主がAIに相談する際は「予算・家族構成・こだわり・スタイル」などを詳しく入力します。AIはその条件に合う工務店を推薦するため、自社と相性の良い顧客とのマッチング精度が上がります。広告やポータルサイト経由で相性の悪い顧客まで集客するコストを削減しながら、成約率の向上が期待できます。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "就活生はどれくらいAIを使って就活相談をしていますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "2026年卒の就活生の約67%がAIに就活の相談をしているという調査結果があります。AIは企業の公式サイトも参照するため、採用コンテンツが不十分だとAIに紹介してもらえず、優秀な候補者にリーチできなくなるリスクがあります。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "AIO対策の診断から始めることはできますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "はい。AIO診断では、各業界のAI回答で御社がどのように引用されているか（あるいはされていないか）を可視化します。競合他社との差分分析も行い、対策の優先順位を明確にした上で、コンテンツ整備・構造化データ実装まで一貫してサポートします。まずはお問い合わせフォームからご相談ください。"
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg-dark: #0a0a0a;
+      --bg-dark2: #111111;
+      --bg-card-dark: #1a1a1a;
+      --border-dark: #2a2a2a;
+      --border-light: #e5e5e5;
+      --bg-light: #ffffff;
+      --bg-card-light: #f8f8f8;
+      --text-white: #ffffff;
+      --text-dark: #111111;
+      --text-body: #333333;
+      --text-muted: #888888;
+      --text-dark-muted: #cccccc;
+      --tag-bg: #f0f0f0;
+      --tag-text: #555555;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-white);
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .font-en { font-family: 'Inter', sans-serif; }
+
+    /* ========== HEADER ========== */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: transparent;
+      transition: background 0.3s ease, backdrop-filter 0.3s ease;
+    }
+
+    header.scrolled {
+      background: rgba(10,10,10,0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .logo {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-white);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+    }
+
+    nav { display: flex; gap: 32px; align-items: center; }
+
+    nav a {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    nav a:hover { color: var(--text-white); }
+
+    /* ========== HERO ========== */
+    .hero {
+      position: relative;
+      min-height: 56vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 140px 24px 80px;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1600');
+      background-size: cover;
+      background-position: center;
+      z-index: 0;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(255,255,255,0.55);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .hero-text-bg {
+      background: rgba(255,255,255,0.35);
+      padding: 32px 48px;
+      border-radius: 6px;
+      backdrop-filter: blur(2px);
+      -webkit-backdrop-filter: blur(2px);
+    }
+
+    .hero-tag {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: rgba(0,0,0,0.07);
+      border: 1px solid rgba(0,0,0,0.15);
+      color: #333;
+      padding: 6px 16px;
+      border-radius: 4px;
+      margin-bottom: 32px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #111;
+      line-height: 1.35;
+      margin-bottom: 24px;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      color: #444;
+      line-height: 1.9;
+      margin-bottom: 0;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .hero-stat {
+      background: rgba(255,255,255,0.75);
+      border: 1px solid rgba(0,0,0,0.1);
+      border-radius: 8px;
+      padding: 16px 24px;
+      text-align: center;
+      min-width: 180px;
+    }
+
+    .hero-stat .stat-num {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #111;
+      display: block;
+    }
+
+    .hero-stat .stat-label {
+      font-size: 0.8rem;
+      color: #666;
+      margin-top: 4px;
+    }
+
+    /* ========== SECTION COMMON ========== */
+    section { padding: 96px 24px; }
+
+    .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .section-label.light { color: #578a75; }
+    .section-label.dark-label { color: #578a75; }
+
+    .section-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 16px;
+    }
+
+    .section-sub {
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    /* ========== SECTION 2: THE SHIFT ========== */
+    .section-shift {
+      background: var(--bg-light);
+      color: var(--text-body);
+    }
+
+    .shift-body {
+      max-width: 680px;
+      margin: 0 auto 64px;
+      text-align: center;
+    }
+
+    .shift-body .section-title { color: var(--text-dark); }
+    .shift-body .section-sub { color: #555; }
+
+    .shift-text {
+      font-size: 1rem;
+      color: #444;
+      line-height: 1.9;
+      margin-top: 32px;
+      text-align: left;
+    }
+
+    .shift-text p { margin-bottom: 1.2em; }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .step-card {
+      border: 1px solid var(--border-light);
+      border-radius: 12px;
+      padding: 32px;
+      background: var(--bg-card-light);
+    }
+
+    .step-num {
+      font-family: 'Inter', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #e5e5e5;
+      display: block;
+      margin-bottom: 16px;
+    }
+
+    .step-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 12px;
+    }
+
+    .step-body {
+      font-size: 0.875rem;
+      color: #666;
+      line-height: 1.8;
+    }
+
+    /* ========== SECTION 3: SERVICES ========== */
+    .section-services {
+      background: var(--bg-dark2);
+    }
+
+    .services-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .services-header .section-title { color: var(--text-white); }
+    .services-header .section-sub { color: var(--text-muted); }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      border: 1px solid var(--border-dark);
+      border-radius: 12px;
+      background: var(--bg-card-dark);
+      cursor: pointer;
+      transition: border-color 0.3s, transform 0.3s;
+      overflow: hidden;
+    }
+
+    .service-card:hover {
+      border-color: #555;
+      transform: translateY(-4px);
+    }
+
+    .service-card-img {
+      height: 220px;
+      overflow: hidden;
+    }
+
+    .service-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .service-card:hover .service-card-img img {
+      transform: scale(1.05);
+    }
+
+    .service-card-body { padding: 24px; }
+
+    .card-tag {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.7);
+      padding: 4px 12px;
+      border-radius: 4px;
+      margin-bottom: 14px;
+    }
+
+    .service-card-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-white);
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    .service-card-desc {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .card-link {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      color: #666;
+      transition: color 0.2s;
+    }
+
+    .service-card:hover .card-link { color: #999; }
+
+    /* ========== SECTION 4: ACCORDION ========== */
+    .section-accordion {
+      background: var(--bg-light);
+    }
+
+    .accordion-header-area {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .accordion-header-area .section-title { color: var(--text-dark); }
+
+    .accordion-list { display: flex; flex-direction: column; gap: 0; }
+
+    .accordion-item {
+      border: 1px solid var(--border-light);
+      border-radius: 0;
+      overflow: hidden;
+    }
+
+    .accordion-item + .accordion-item { border-top: none; }
+    .accordion-item:first-child { border-radius: 12px 12px 0 0; }
+    .accordion-item:last-child { border-radius: 0 0 12px 12px; }
+
+    .accordion-trigger {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 28px 32px;
+      background: var(--bg-card-light);
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      transition: background 0.2s;
+      gap: 16px;
+    }
+
+    .accordion-trigger:hover { background: #f0f0f0; }
+
+    .accordion-trigger-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex: 1;
+    }
+
+    .accordion-tag-light {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      padding: 4px 12px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    .accordion-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    .accordion-icon {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 300;
+      color: var(--text-muted);
+      line-height: 1;
+      flex-shrink: 0;
+      width: 28px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.45s ease, opacity 0.35s ease;
+    }
+
+    .accordion-inner {
+      padding: 40px 32px 48px;
+      background: var(--bg-light);
+      border-top: 1px solid var(--border-light);
+    }
+
+    .accordion-layout {
+      display: grid;
+      grid-template-columns: 60% 38%;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .accordion-img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .checklist { list-style: none; margin-bottom: 32px; }
+
+    .checklist li {
+      display: flex;
+      gap: 12px;
+      font-size: 0.9rem;
+      color: #444;
+      line-height: 1.8;
+      padding: 12px 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .checklist li:last-child { border-bottom: none; }
+
+    .checklist-icon {
+      font-size: 1rem;
+      color: #ccc;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .approach-box {
+      background: #f0f6f4;
+      border-left: 3px solid #578a75;
+      border-radius: 0 8px 8px 0;
+      padding: 24px 28px;
+    }
+
+    .approach-box p {
+      font-size: 0.9rem;
+      color: #334;
+      line-height: 1.9;
+    }
+
+    .approach-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #578a75;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    /* ========== SECTION 5: CTA ========== */
+    .section-cta {
+      background: var(--bg-dark);
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .cta-grid-bg {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+      z-index: 0;
+    }
+
+    .cta-content {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .cta-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--text-white);
+      line-height: 1.5;
+      margin-bottom: 24px;
+    }
+
+    .cta-sub {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.9;
+      margin-bottom: 48px;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: var(--text-white);
+      color: var(--text-dark);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 18px 44px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+      letter-spacing: 0.02em;
+    }
+
+    .cta-btn:hover {
+      background: #e8e8e8;
+      transform: translateY(-2px);
+    }
+
+    .cta-note {
+      margin-top: 20px;
+      font-size: 0.78rem;
+      color: #555;
+    }
+
+    /* ========== FOOTER ========== */
+    footer {
+      background: var(--bg-dark);
+      border-top: 1px solid #1a1a1a;
+      padding: 32px 24px;
+      text-align: center;
+    }
+
+    footer p {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      color: #555;
+      letter-spacing: 0.05em;
+    }
+
+    /* ========== FADE IN ========== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 768px) {
+      header { padding: 16px 20px; }
+
+      nav { gap: 16px; }
+      nav a { font-size: 0.7rem; }
+
+      .hero { padding: 100px 16px 64px; }
+      .hero h1 { font-size: 1.9rem; }
+      .hero-sub { font-size: 0.95rem; }
+
+      .hero-stats { flex-direction: column; align-items: center; }
+      .hero-stat { min-width: 240px; }
+
+      section { padding: 64px 16px; }
+      .section-title { font-size: 1.6rem; }
+
+      .steps-grid { grid-template-columns: 1fr; gap: 16px; }
+      .services-grid { grid-template-columns: 1fr; }
+
+      .accordion-layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .accordion-layout .accordion-text-col { order: 2; }
+      .accordion-layout .accordion-img-col { order: 1; }
+
+      .accordion-trigger { padding: 20px; }
+      .accordion-inner { padding: 24px 20px 32px; }
+      .accordion-trigger-left { flex-direction: column; align-items: flex-start; gap: 8px; }
+
+      .cta-title { font-size: 1.5rem; }
+      .cta-btn { padding: 16px 28px; font-size: 0.9rem; }
+    }
+
+    @media (max-width: 480px) {
+      nav { display: none; }
+      .hero h1 { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header id="main-header">
+    <a href="/" class="logo">simpleA</a>
+    <nav>
+      <a href="/#mission">Mission</a>
+      <a href="/#works">Works</a>
+      <a href="/#company">Company</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- SECTION 1: HERO -->
+  <section class="hero" aria-label="ヒーロー">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-tag font-en">AIO / AI Search Optimization</div>
+      <div class="hero-text-bg">
+        <h1>AIに選ばれない会社は、<br>存在しないのと同じ時代へ。</h1>
+        <p class="hero-sub">
+          AIに見つけてもらうには、自社について詳しく正直に言語化する必要があります。<br>
+          AI最適化対策とは、つまり自社と顧客のマッチングです。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: THE SHIFT -->
+  <section class="section-shift">
+    <div class="section-inner">
+      <div class="shift-body fade-in">
+        <span class="section-label light font-en">The Shift</span>
+        <h2 class="section-title">静かに、でも確実に、<br>ルールが変わった。</h2>
+        <div class="shift-text">
+          <p>AIの進歩は加速するばかり。最新のツールを使い慣れた頃には次のツールが登場し、情報を追いかけるだけでひと苦労です。。でも、もっと静かで確実な変化が起きています——消費者の生活に、AIがすっかり浸透し始めているということです。</p>
+          <p>家を建てる施主も、就職先を探す学生も、新素材を探す食品メーカーの担当者も、「AIに相談する」が当たり前になりました。</p>
+          <p>その結果、デジタルマーケティングのルールが塗り替わっています。AIに引用されない会社は、どれだけ実力があっても消費者の選択肢に入らなくなってきました。</p>
+        </div>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card fade-in">
+          <span class="step-num font-en">01</span>
+          <h3 class="step-title">検索からAI相談へ</h3>
+          <p class="step-body">消費者の情報収集の起点が、検索エンジンからAIへと移行。より詳細な条件でマッチングが行われるようになった。</p>
+        </div>
+        <div class="step-card fade-in">
+          <span class="step-num font-en">02</span>
+          <h3 class="step-title">情報の質と構造が問われる</h3>
+          <p class="step-body">AIはWEB上の情報を収集・解析し、質問に答える。テキスト構造、専門性、一貫性のある情報が引用される。</p>
+        </div>
+        <div class="step-card fade-in">
+          <span class="step-num font-en">03</span>
+          <h3 class="step-title">高精度マッチングのチャンス</h3>
+          <p class="step-body">自社の独自情報をAI向けに公開すれば、自社と本当に相性のいい顧客とだけマッチングできる時代が来た。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: SERVICE CARDS -->
+  <section class="section-services">
+    <div class="section-inner">
+      <div class="services-header fade-in">
+        <span class="section-label dark-label font-en">Our Services</span>
+        <h2 class="section-title">業界別AIOサポート</h2>
+        <p class="section-sub">あなたの業界に特化した、AIマッチング最適化を。</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card fade-in" onclick="openAccordion('acc-research')" data-target="acc-research">
+          <div class="service-card-img">
+            <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&q=80&w=800" alt="研究資産AIOサポート" loading="lazy">
+          </div>
+          <div class="service-card-body">
+            <span class="card-tag font-en">研究・食品・製薬</span>
+            <h3 class="service-card-title">研究資産AIOサポート</h3>
+            <p class="service-card-desc">論文の研究資産を構造化し、AIに正確に引用される企業サイトへ。</p>
+            <span class="card-link font-en">詳細を見る ↓</span>
+          </div>
+        </div>
+
+        <div class="service-card fade-in" onclick="openAccordion('acc-housing')" data-target="acc-housing">
+          <div class="service-card-img">
+            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800" alt="工務店AIOサポート" loading="lazy">
+          </div>
+          <div class="service-card-body">
+            <span class="card-tag font-en">住宅・工務店</span>
+            <h3 class="service-card-title">工務店AIOサポート</h3>
+            <p class="service-card-desc">施主のAI相談データを活用し、本当にマッチする顧客に選ばれる仕組みを構築。</p>
+            <span class="card-link font-en">詳細を見る ↓</span>
+          </div>
+        </div>
+
+        <div class="service-card fade-in" onclick="openAccordion('acc-recruit')" data-target="acc-recruit">
+          <div class="service-card-img">
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=800" alt="採用広報AIOサポート" loading="lazy">
+          </div>
+          <div class="service-card-body">
+            <span class="card-tag font-en">採用・HR</span>
+            <h3 class="service-card-title">採用広報AIOサポート</h3>
+            <p class="service-card-desc">就活生がAIに相談する質問を独自収集・分析し、AIに紹介される求人企業へ。</p>
+            <span class="card-link font-en">詳細を見る ↓</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: ACCORDION -->
+  <section class="section-accordion">
+    <div class="section-inner">
+      <div class="accordion-header-area fade-in">
+        <span class="section-label light font-en">Detail</span>
+        <h2 class="section-title" style="color: var(--text-dark);">各サービスの詳細</h2>
+      </div>
+
+      <div class="accordion-list">
+
+        <!-- Accordion 1: Research -->
+        <div class="accordion-item" id="item-acc-research">
+          <button class="accordion-trigger" onclick="toggleAccordion('acc-research')" aria-expanded="false">
+            <div class="accordion-trigger-left">
+              <span class="accordion-tag-light font-en">研究・食品・製薬</span>
+              <span class="accordion-title">研究資産AIOサポート</span>
+            </div>
+            <span class="accordion-icon" id="icon-acc-research">+</span>
+          </button>
+          <div class="accordion-content" id="acc-research">
+            <div class="accordion-inner">
+              <div class="accordion-layout">
+                <div class="accordion-text-col">
+                  <ul class="checklist">
+                    <li>
+                      <span class="checklist-icon">□</span>
+                      <span>機能性食品原料を探す食品メーカー担当者、特殊な培地を探す製薬研究者は、日々AIを使って論文を調べています。あなたの会社の論文は、AIに正しく引用されていますか？</span>
+                    </li>
+                    <li>
+                      <span class="checklist-icon">□</span>
+                      <span>論文の結論・作用機序は正確に伝わっていますか？その論文は、あなたの会社・製品と紐づけて紹介されていますか？</span>
+                    </li>
+                    <li>
+                      <span class="checklist-icon">□</span>
+                      <span>AIがPubMedには誘導しても、あなたの企業サイトには誘導できていないのではないですか？</span>
+                    </li>
+                    <li>
+                      <span class="checklist-icon">□</span>
+                      <span>WEBサイトに論文のリンクやPDFをアップしているだけでは、AIは中身まで読めません。構造化データが必要です。</span>
+                    </li>
+                    <li>
+                      <span class="checklist-icon">□</span>
+                      <span>ただし、構造化データの作成をAIに任せると、ハルシネーションのリスクがあります。マウス実験をヒト試験と誤って公開するようなミスは、企業信頼を損ないます。</span>
+                    </li>
+                  </ul>
+                  <div class="approach-box">
+                    <span class="approach-label font-en">simpleA's Approach</span>
+                    <p>simpleAは、御社の研究資産を公式サイトでAI向けに整備・公開するサポートをします。構造化データの作成をAIに任せきりにするのではなく、専門家が監修することでハルシネーションリスクを最小化します。</p>
+                  </div>
+                </div>
+                <div class="accordion-img-col">
+                  <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800" alt="研究資産AIOサポート" class="accordion-img" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion 2: Housing -->
+        <div class="accordion-item" id="item-acc-housing">
+          <button class="accordion-trigger" onclick="toggleAccordion('acc-housing')" aria-expanded="false">
+            <div class="accordion-trigger-left">
+              <span class="accordion-tag-light font-en">住宅・工務店</span>
+              <span class="accordion-title">工務店AIOサポート</span>
+            </div>
+            <span class="accordion-icon" id="icon-acc-housing">+</span>
+          </button>
+          <div class="accordion-content" id="acc-housing">
+            <div class="accordion-inner">
+              <div class="accordion-layout">
+                <div class="accordion-text-col">
+                  <ul class="checklist">
+                    <li>
+                      <span class="checklist-icon">□</span>
+                      <span>家づくりを検討している施主は、デザイン・工務店の選び方・失敗しない方法まで、何でもAIに相談するようになっています。</span>
+                    </li>
+                    <li>
+                      <span class="checklist-icon">□</span>
+                      <span>あなたの会社は写真・動画ばかりに注力して、AIが読めるテキスト情報が不足していませんか？</span>
+                    </li>
+                    <li>
+                      <span class="checklist-icon">□</span>
+                      <span>施主はAIに「予算・こだわり・家族構成・スタイル」を詳しく入力して調べています。その質問に答えられる情報を、あなたのサイトは持っていますか？</span>
+                    </li>
+                    <li>
+                      <span class="checklist-icon">□</span>
+                      <span>広告やポータルサイトに高いお金を払って、自社と相性の悪い顧客まで集客することに疑問を感じていませんか？</span>
+                    </li>
+                    <li>
+                      <span class="checklist-icon">□</span>
+                      <span>実は、住宅業界はAIが企業の公式サイトを参照しやすい業界のひとつです。今がAIO対策を始める絶好のタイミングです。</span>
+                    </li>
+                  </ul>
+                  <div class="approach-box">
+                    <span class="approach-label font-en">simpleA's Approach</span>
+                    <p>simpleAは、独自に収集・蓄積している「施主がAIに相談しているリアルな声」を活用し、AIに推奨される工務店になるためのコンテンツ整備・構造化をサポートします。広告費を削減しながら、より質の高い顧客マッチングを実現します。</p>
+                  </div>
+                </div>
+                <div class="accordion-img-col">
+                  <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=800" alt="工務店AIOサポート" class="accordion-img" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion 3: Recruit -->
+        <div class="accordion-item" id="item-acc-recruit">
+          <button class="accordion-trigger" onclick="toggleAccordion('acc-recruit')" aria-expanded="false">
+            <div class="accordion-trigger-left">
+              <span class="accordion-tag-light font-en">採用・HR</span>
+              <span class="accordion-title">採用広報AIOサポート</span>
+            </div>
+            <span class="accordion-icon" id="icon-acc-recruit">+</span>
+          </button>
+          <div class="accordion-content" id="acc-recruit">
+            <div class="accordion-inner">
+              <div class="accordion-layout">
+                <div class="accordion-text-col">
+                  <ul class="checklist">
+                    <li>
+                      <span class="checklist-icon">□</span>
+                      <span>2026年卒の就活生の約3人に2人が、AIに就活の相談をしているという調査結果があります。あなたの会社はAIに紹介してもらえていますか？</span>
+                    </li>
+                    <li>
+                      <span class="checklist-icon">□</span>
+                      <span>AIは就活ポータルサイトだけでなく、企業の公式サイトも参照しています。他社より魅力的で、具体的で、AIが読みやすいコンテンツを用意できているでしょうか？</span>
+                    </li>
+                    <li>
+                      <span class="checklist-icon">□</span>
+                      <span>就活生がAIにどんな質問を投げているか、把握していますか？「残業は多いですか？」「社風はどんな感じですか？」——その質問に答える情報が公式サイトにありますか？</span>
+                    </li>
+                  </ul>
+                  <div class="approach-box">
+                    <span class="approach-label font-en">simpleA's Approach</span>
+                    <p>simpleAは、各業界で就活生がAIに相談している質問を独自収集・分析しています。求人企業がAIに紹介してもらえるよう、採用コンテンツの整備・構造化をサポートします。</p>
+                  </div>
+                </div>
+                <div class="accordion-img-col">
+                  <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=800" alt="採用広報AIOサポート" class="accordion-img" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: CTA -->
+  <section class="section-cta">
+    <div class="cta-grid-bg"></div>
+    <div class="cta-content fade-in">
+      <span class="section-label dark-label font-en" style="text-align:center; display:block; margin-bottom:24px;">Contact</span>
+      <h2 class="cta-title">まず、御社のAI引用状況を<br>調べてみませんか。</h2>
+      <p class="cta-sub">
+        AIO診断では、各業界のAI回答で御社がどのように引用されているか（あるいはされていないか）を可視化します。<br>
+        まずは現状把握から。お気軽にご相談ください。
+      </p>
+      <a href="https://forms.gle/fxezTb8YDy1P8YWh9" target="_blank" rel="noopener noreferrer" class="cta-btn font-en">
+        お問い合わせ・AIO診断を依頼する →
+      </a>
+      <p class="cta-note">※外部フォームへ遷移します</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="font-en">© 2025 simpleA Inc. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // ===== HEADER SCROLL =====
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // ===== ACCORDION =====
+    function toggleAccordion(id) {
+      const content = document.getElementById(id);
+      const icon = document.getElementById('icon-' + id);
+      const trigger = content.previousElementSibling;
+      const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+
+      // Close all
+      document.querySelectorAll('.accordion-content').forEach(el => {
+        el.style.maxHeight = null;
+        el.style.opacity = '0';
+      });
+      document.querySelectorAll('.accordion-icon').forEach(el => el.textContent = '+');
+      document.querySelectorAll('.accordion-trigger').forEach(el => el.setAttribute('aria-expanded', 'false'));
+
+      // Open clicked (if it was closed)
+      if (!isOpen) {
+        content.style.maxHeight = content.scrollHeight + 'px';
+        content.style.opacity = '1';
+        icon.textContent = '−';
+        trigger.setAttribute('aria-expanded', 'true');
+        setTimeout(() => {
+          const headerH = document.getElementById('main-header').offsetHeight;
+          const top = trigger.getBoundingClientRect().top + window.scrollY - headerH - 8;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }, 480);
+      }
+    }
+
+    // Called from service cards
+    function openAccordion(id) {
+      const content = document.getElementById(id);
+      const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+      const trigger = content.previousElementSibling;
+
+      if (!isOpen) {
+        toggleAccordion(id);
+      } else {
+        // Already open, just scroll to trigger
+        const headerH = document.getElementById('main-header').offsetHeight;
+        const top = trigger.getBoundingClientRect().top + window.scrollY - headerH - 8;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    }
+
+    // ===== FADE IN (Intersection Observer) =====
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

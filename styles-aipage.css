@@ -30,3 +30,12 @@ main p,main li{ text-wrap:pretty }main h2,main h3,main h4{ text-wrap:balance }
 .partner-list .pair span{color:#d70c18;font-weight:700;font-size:20px;line-height:1}
 .partner-list>li>p:not(.pair){max-width:none;font-size:14px}
 @media(max-width:767px){.partner-list{grid-template-columns:1fr}.partner-list>li,.partner-list>li:first-child,.partner-list>li:last-child{padding:28px 0}.partner-list .pair{flex-wrap:wrap;gap:8px 12px;font-size:15px}.partner-list>li>p:not(.pair){font-size:15px}}
+
+.partner-list>li>img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;margin:0 0 24px}
+.partner-people{margin:16px 0 0;font-size:14px;line-height:1.7}
+.partner-people>div{display:flex;gap:16px;padding:8px 0;border-top:1px solid #dadada}
+.partner-people dt{flex:0 0 190px;color:#555}
+.partner-people dd{margin:0;font-weight:700}
+.partner-list .text-link{display:inline-block;margin-top:auto;padding-top:20px;align-self:flex-start;font-size:14px;text-decoration:underline;text-underline-offset:4px}
+.partner-people+.text-link{padding-top:20px}
+@media(max-width:767px){.partner-people dt{flex-basis:170px}.partner-list>li>img{margin-bottom:20px}}

@@ -1,0 +1,49 @@
+/* Measured sources and intentional adaptations: 設計根拠_フォーム.md */
+body{font-family:"Noto Sans JP",sans-serif;font-weight:400}
+.contact-page{font-size:16px;line-height:28px}
+.contact-wrap{width:776px;max-width:calc(100% - 48px);margin:0 auto;padding:64px 0 80px}
+.contact-page h1{font-size:40px;line-height:52px;font-weight:700;margin:0 0 24px}
+.contact-page h2{font-size:26px;line-height:36.4px;font-weight:700;margin:0 0 16px;padding:0}
+.contact-page h2::after{content:none}
+.contact-page a{text-decoration:underline;text-underline-offset:3px}
+.page-intro{padding-bottom:32px;border-bottom:1px solid #dadada;margin-bottom:32px}
+.page-intro p+p{margin-top:8px}
+.form-guide{margin-bottom:24px;font-size:14px;line-height:24px}
+.form-field{margin-bottom:24px}
+.form-field>label{display:block;font-weight:700;margin-bottom:8px}
+.required,.optional{font-size:14px;line-height:24px;margin-left:8px;white-space:nowrap}
+.required{color:#b8001e;font-weight:700}.optional{font-weight:400;color:#555}
+.form-field input,.form-field select,.form-field textarea{display:block;width:100%;min-width:0;border:1px solid #ccc;border-radius:0;background:#fff;color:#000;font:400 16px/24px "Noto Sans JP",sans-serif;padding:8px 16px;box-shadow:none}
+.form-field input,.form-field select{height:56px}
+.form-field textarea{min-height:180px;line-height:28px;resize:vertical}
+.contact-page input:focus-visible,.contact-page select:focus-visible,.contact-page textarea:focus-visible{outline:2px solid #000;outline-offset:2px}
+.form-field [aria-invalid="true"]{border-color:#b8001e}
+.field-help{font-size:14px;line-height:24px;margin-top:8px;color:#555}
+.field-error{font-size:14px;line-height:24px;color:#b8001e;margin-top:10px}
+.consent{border-top:1px solid #dadada;padding-top:24px;margin-top:32px}
+.consent>label{display:flex;align-items:flex-start;gap:12px;cursor:pointer}
+.consent input{flex:none;width:20px;height:20px;margin-top:4px;accent-color:#1d1c1b}
+.form-actions{margin-top:32px;text-align:center}
+.form-actions button{width:360px;max-width:100%;min-height:56px;padding:16px 24px;border:1px solid #1d1c1b;border-radius:0;background:#1d1c1b;color:#fff;font:700 16px/24px "Noto Sans JP",sans-serif;cursor:pointer}
+.form-actions button:hover{background:#333}.form-actions button:disabled{cursor:wait;opacity:.6}
+#sending-status:not(:empty){margin-top:16px}
+.form-error{margin-top:24px;color:#b8001e;scroll-margin-top:100px}
+.form-error p+p{margin-top:8px}.form-error a{color:#000}
+.form-trap{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.contact-page [hidden]{display:none!important}
+.contact-success{padding:32px 0;scroll-margin-top:100px}
+.contact-success:focus{outline:none}
+.contact-success h2 span{display:inline-block}
+.no-script{margin-top:24px}
+.privacy-content section+section{margin-top:32px}
+.privacy-content section p+p{margin-top:16px}
+.privacy-content ul{list-style:disc;padding-left:24px}
+.policy-date{margin-top:32px;padding-top:24px;border-top:1px solid #dadada}
+.policy-contact{margin-top:24px}
+@media(max-width:767px){
+ .contact-wrap{padding:40px 0 60px}
+ .contact-page h1{font-size:25px;line-height:35px}
+ .contact-page h2{font-size:24px;line-height:33.6px}
+ .page-intro{padding-bottom:24px;margin-bottom:24px}
+ .contact-success,.form-error{scroll-margin-top:80px}
+}

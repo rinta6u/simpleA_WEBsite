@@ -1,0 +1,120 @@
+/* 事例ページ。実測元と既存値の対応は「設計根拠.md / 事例ページ」参照。 */
+.case-head{padding:120px 0 0}
+.case-head .wrap,.case-sec .wrap,.back .wrap{width:800px}
+.crumb{font-size:12px;line-height:19.2px;margin-bottom:24px}
+.crumb a{text-decoration:underline}
+.case-head h1{font-size:40px;line-height:56px;font-weight:700}
+.case-head .lead,.case-sec .lead{font-size:16px;line-height:28px;margin-top:24px}
+.case-facts{display:flex;flex-direction:column;gap:16px;margin-top:40px;font-size:16px;line-height:28px}
+.case-facts strong{font-weight:700;margin-right:8px}
+.case-facts small{font-size:inherit;font-weight:inherit}
+.case-profile{display:flex;flex-direction:column;gap:8px;margin-top:40px;font-size:14px;line-height:24px}
+.case-profile>div{display:grid;grid-template-columns:96px minmax(0,1fr);gap:16px}
+.case-profile dt{font-weight:700}
+.case-sec{padding:120px 0 0}
+.step{font-size:14px;line-height:22.4px;font-weight:700;margin-bottom:5px}
+/* h2 の書体・寸法・下の短い赤帯は styles3.css をそのまま継承。 */
+.case-subheading,.case-findings h3,.case-voices h3{font-size:18px;line-height:25.2px;font-weight:700;margin-top:40px}
+.case-findings h3 span{display:inline;margin-left:16px;font-size:inherit;font-weight:inherit}
+.case-subheading+.lead{margin-top:16px}
+.fig{margin:16px 0 32px}
+.fig img{width:auto;max-width:100%;height:auto;object-fit:contain}
+.fig figcaption{font-size:12px;line-height:19.2px;margin-top:8px}
+.case-figures{display:block}
+.case-findings ul{margin-top:16px;font-size:16px;line-height:28px}
+.case-findings li+li{margin-top:16px}
+.case-voices blockquote{margin:0;padding:0;border:0}
+.case-voices p{font-size:16px;line-height:28px;margin-top:16px}
+.note{font-size:12px;line-height:19.2px;margin-top:24px}
+.back{padding:120px 0 60px}
+/* サムネイル＋本文＋詳しく見る：Sansan / SmartHR / freee。設計根拠.md参照。 */
+#results .cases{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;margin-top:60px}
+#results .case{display:flex;flex-direction:column;min-width:0}
+#results .case-thumbnail{display:block;width:100%;aspect-ratio:16/9;height:auto;object-fit:cover}
+#results .case-thumbnail-site{object-position:top}
+#results .case .body{display:flex;flex:1;flex-direction:column;gap:16px;padding:16px}
+#results .case h3{font-size:16px;line-height:27.2px;margin:0;font-weight:700}
+#results .case p{font-size:14px;line-height:24px;margin:0}
+#results .case .case-card-title{font-size:18px;line-height:25.2px;font-weight:700}
+#results .case .meta{font-size:12px;line-height:24px;flex-wrap:wrap;gap:4px 16px}
+#results .case-read-more{display:block;align-self:flex-end;margin-top:auto;padding:8px 0;font-size:16px;line-height:24px;text-decoration:underline;text-underline-offset:4px}
+#results .case:hover .case-card-title,#results .case:focus-visible .case-card-title{text-decoration:underline;text-underline-offset:4px}
+#results .case:focus-visible{outline:2px solid #000;outline-offset:4px}
+@media(max-width:767px){
+ .case-head{padding-top:60px}
+ .case-head .wrap,.case-sec .wrap,.back .wrap{width:auto}
+ .case-head h1{font-size:24px;line-height:42px}
+ .case-head .lead,.case-sec .lead,.case-facts,.case-findings ul,.case-voices p{font-size:14px;line-height:24.5px}
+ .case-sec{padding-top:60px}
+ .case-profile>div{grid-template-columns:96px minmax(0,1fr)}
+ .back{padding:60px 0}
+ #results .cases{grid-template-columns:1fr}
+ #results .case{padding:0}
+}
+
+/* 2026-10-28: 図版の出典・計測値・適用差分は設計根拠.mdに記録。 */
+.case-head h2,.case-sec h2{font-weight:700}
+.case-client{font-size:18px;line-height:28px;font-weight:700;margin-top:24px}
+.case-hero-image{margin-top:40px;margin-bottom:32px}
+.case-hero-image img{width:100%;height:auto}
+.result-chart,.risk-chart{margin-top:40px;padding:32px;background:#f8f8f8}
+.result-chart>figcaption,.risk-chart>figcaption{font-size:18px;line-height:28px;font-weight:700}
+.comparison-chart{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:32px}
+.comparison-column{text-align:center;min-width:0}
+.chart-value{font-size:64px;line-height:1.2;font-weight:700}
+.chart-value span{font-size:28px}
+.accent{color:#d70c18}
+.bar-space{height:240px;display:flex;align-items:flex-end;justify-content:center;border-bottom:1px solid #dadada;margin-top:16px}
+.vertical-bar{width:48%;max-width:160px}
+.before-bar{background:#dadada}.after-bar{background:#d70c18}
+.chart-month{font-size:16px;line-height:28px;font-weight:700;margin-top:8px}
+.chart-count{font-size:14px;line-height:24px;margin-top:8px}
+.chart-count strong{font-size:28px;line-height:40px}
+.chart-summary{margin-top:32px;font-size:18px;line-height:1.75;text-align:center}
+.chart-summary strong{font-size:40px;color:#d70c18}.chart-summary strong span{font-size:18px;margin-left:8px}
+.support-flow{list-style:none;margin:40px 0 0;padding:0}
+.support-flow li{position:relative;display:grid;grid-template-columns:96px minmax(0,1fr);gap:16px;padding:16px;background:#f8f8f8;margin-bottom:16px}
+.support-flow li:not(:last-child)::after{content:"";position:absolute;width:8px;height:8px;border-top:1px solid #000;border-right:1px solid #000;transform:rotate(135deg);bottom:-10px;left:50%}
+.flow-number{font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;border-right:1px solid #dadada}
+.support-flow h3{font-size:18px;line-height:28px;font-weight:700}
+.support-flow p{font-size:16px;line-height:28px;margin-top:8px}
+.site-figure{margin-top:40px}.site-figure img{margin:auto;max-height:560px}.site-figure figcaption{text-align:center}
+.result-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:40px}
+.result-stats li{text-align:center}.result-stats li>p:first-child{display:flex;flex-direction:column;gap:8px}
+.result-stats strong{font-size:14px;line-height:24px}.result-stats li>p:first-child>span{font-size:40px;line-height:56px;font-weight:700}.result-stats small{font-size:18px;font-weight:700}
+.case-head .case-facts{display:grid;grid-template-columns:1fr 1fr;gap:16px 32px;font-size:14px;line-height:24px;margin-top:32px}
+.risk-bars{margin-top:32px;display:grid;gap:24px}
+.risk-row{display:grid;grid-template-columns:180px minmax(0,1fr) 104px;gap:16px;align-items:center}
+.risk-label{font-size:14px;line-height:24px}.risk-track{height:32px}.risk-track span{display:block;height:100%;background:#000}
+.risk-value{white-space:nowrap}.risk-value strong{font-size:28px;line-height:40px}.risk-value span{font-size:14px;margin-left:4px}
+@media(max-width:767px){
+ .case-client{font-size:16px;line-height:28px}
+ .result-chart,.risk-chart{padding:24px 16px}
+ .result-chart>figcaption,.risk-chart>figcaption{font-size:16px;line-height:28px}
+ .comparison-chart{gap:16px;margin-top:24px}.chart-value{font-size:40px}.chart-value span{font-size:18px}
+ .bar-space{height:180px}.vertical-bar{width:64%}.chart-month{font-size:14px}.chart-count{font-size:12px}.chart-count strong{font-size:24px}
+ .chart-summary{font-size:14px}.chart-summary strong{font-size:28px}.chart-summary strong span{font-size:14px;margin-left:4px}
+ .support-flow li{grid-template-columns:64px minmax(0,1fr)}.flow-number{font-size:12px}.support-flow p{font-size:14px;line-height:24.5px}
+ .result-stats{grid-template-columns:1fr 1fr;gap:24px}.case-head .case-facts{grid-template-columns:1fr;gap:16px}
+ .risk-row{grid-template-columns:minmax(0,1fr) 92px;gap:8px 16px}.risk-label{grid-column:1/-1}.risk-track{height:24px}
+}
+
+/* 運用の小見出し＋短い本文：Sansan 神戸製鋼所。 */
+.case-operation h3{font-size:18px;line-height:25.2px;font-weight:700;margin-top:40px}
+.case-operation p{font-size:16px;line-height:28px;margin-top:16px}
+/* 全体図→詳細：積水樹脂キャップアイシステム。縦フロー：JobSuite。 */
+.support-overview{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;list-style:none;padding:0;margin:40px 0}
+.support-overview li{position:relative;background:#f8f8f8;padding:16px;text-align:center}
+.support-overview li:not(:last-child)::after{content:"";position:absolute;right:-11px;top:50%;width:8px;height:8px;border-top:1px solid #000;border-right:1px solid #000;transform:rotate(45deg)}
+.support-overview span{display:block;font-size:14px;line-height:24px}
+.support-overview strong{display:block;font-size:18px;line-height:28px;margin-top:8px}
+.support-overview p{font-size:14px;line-height:24px;margin-top:8px}
+.support-flow .flow-outcome{font-size:16px;line-height:28px;margin-top:16px}
+.flow-outcome dt{font-weight:700}.flow-outcome dd{margin-top:8px}
+@media(max-width:767px){
+ .case-operation p,.support-flow .flow-outcome{font-size:14px;line-height:24.5px}
+ .support-overview{grid-template-columns:1fr}
+ .support-overview li:not(:last-child)::after{right:auto;left:50%;top:auto;bottom:-11px;transform:rotate(135deg)}
+ .support-flow li{grid-template-columns:1fr;gap:8px}
+ .support-flow .flow-number{justify-content:flex-start;border-right:0}
+}

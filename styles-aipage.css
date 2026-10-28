@@ -21,3 +21,12 @@ main p,main li{ text-wrap:pretty }main h2,main h3,main h4{ text-wrap:balance }
 .concern-list p{text-wrap:balance}
 
 .advisory{margin-top:48px}.advisory ul{list-style:disc;padding-left:1.2em;margin-top:16px;font-size:14px}.advisory li+li{margin-top:8px}
+
+.partner-list{grid-template-columns:repeat(2,1fr);max-width:1100px;margin-left:auto;margin-right:auto}
+.partner-list>li,.partner-list>li:first-child,.partner-list>li:last-child{padding:32px 40px;align-items:stretch}
+.partner-list h4{text-align:center;font-size:18px;margin-bottom:16px}
+.partner-list .pair{display:flex;justify-content:center;align-items:center;gap:16px;margin:0 0 20px;padding:14px 0;border-top:1px solid #aaa;border-bottom:1px solid #aaa;font-size:16px;line-height:1.5;text-align:center}
+.partner-list .pair strong{font-weight:700}
+.partner-list .pair span{color:#d70c18;font-weight:700;font-size:20px;line-height:1}
+.partner-list>li>p:not(.pair){max-width:none;font-size:14px}
+@media(max-width:767px){.partner-list{grid-template-columns:1fr}.partner-list>li,.partner-list>li:first-child,.partner-list>li:last-child{padding:28px 0}.partner-list .pair{flex-wrap:wrap;gap:8px 12px;font-size:15px}.partner-list>li>p:not(.pair){font-size:15px}}

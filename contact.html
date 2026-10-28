@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>お問い合わせ | 株式会社simpleA</title><meta name="description" content="株式会社simpleAへのサービスのご相談、セミナー・取材に関するお問い合わせ。">
+<link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="styles3.css" rel="stylesheet"><link href="styles-contact.css" rel="stylesheet"></head><body>
+<header class="header"><div class="wrap"><button aria-controls="site-nav" aria-expanded="false" aria-label="メニュー" class="menu-toggle" type="button"><span></span><span></span></button><a class="logo" href="index.html"><img alt="simpleA" src="img/logo.png"/></a>
+<nav class="nav" id="site-nav"><div class="business-nav">
+<div class="business-nav-heading"><a href="index.html#business" id="business-link">事業</a><button class="business-toggle" type="button" aria-label="事業のメニューを開閉" aria-expanded="false" aria-controls="business-submenu"></button></div>
+<div class="business-submenu" id="business-submenu" inert><div class="business-submenu-inner"><ul><li><a href="ai-search.html">AI検索対策</a></li><li><span class="soon-item">音声AI日報 VoyLog（準備中）</span></li></ul></div></div>
+</div><a href="index.html#results">実績</a><a href="index.html#news">ニュース</a><a href="index.html#company">会社概要</a><a class="contact" href="index.html#contact">お問い合わせ</a></nav></div></header><main class="contact-page"><div class="contact-wrap">
+<div class="page-intro"><h1>お問い合わせ</h1>
+<p>サービスに関するご相談や、セミナー・取材のお問い合わせを承ります。</p>
+<p>メールでも受け付けています。<a href="mailto:info@simplea.cc">info@simplea.cc</a></p></div>
+<div id="contact-area">
+<form id="contact-form" action="https://2424fd1236687d5e.lolipop.jp/simplea/contact/send.php" method="post" novalidate>
+<p class="form-guide">「必須」の項目は必ずご入力ください。</p>
+<div class="form-field"><label for="name">お名前 <span class="required">必須</span></label>
+<input id="name" name="name" type="text" maxlength="100" autocomplete="name" required aria-describedby="name-error">
+<p class="field-error" id="name-error" hidden></p></div>
+<div class="form-field"><label for="company">会社名・組織名 <span class="required">必須</span></label>
+<input id="company" name="company" type="text" maxlength="200" autocomplete="organization" required aria-describedby="company-error">
+<p class="field-error" id="company-error" hidden></p></div>
+<div class="form-field"><label for="department">部署・役職 <span class="optional">任意</span></label>
+<input id="department" name="department" type="text" maxlength="200" autocomplete="organization-title"  aria-describedby="department-error">
+<p class="field-error" id="department-error" hidden></p></div>
+<div class="form-field"><label for="email">メールアドレス <span class="required">必須</span></label>
+<input id="email" name="email" type="email" maxlength="254" autocomplete="email" required aria-describedby="email-error">
+<p class="field-error" id="email-error" hidden></p></div>
+<div class="form-field"><label for="phone">電話番号 <span class="optional">任意</span></label>
+<input id="phone" name="phone" type="tel" maxlength="50" autocomplete="tel"  aria-describedby="phone-error">
+<p class="field-error" id="phone-error" hidden></p></div>
+<div class="form-field"><label for="category">お問い合わせの種別 <span class="required">必須</span></label>
+<select id="category" name="category" required aria-describedby="category-error"><option value="">選択してください</option><option>AI検索対策について</option><option>音声AI日報 VoyLog について</option><option>セミナー・取材・その他</option></select>
+<p class="field-error" id="category-error" hidden></p></div>
+<div class="form-field"><label for="message">お問い合わせ内容 <span class="required">必須</span></label>
+<textarea id="message" name="message" rows="6" maxlength="5000" required aria-describedby="message-help message-error"></textarea>
+<p class="field-help" id="message-help">5000文字以内でご入力ください。</p><p class="field-error" id="message-error" hidden></p></div>
+<div class="form-trap" aria-hidden="true"><label for="website">この欄は入力しないでください</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+<input type="hidden" id="started-at" name="started_at" value="">
+<div class="consent"><label for="consent"><input id="consent" name="consent" type="checkbox" value="1" required aria-describedby="consent-error"><span><a href="privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>に同意する <span class="required">必須</span></span></label>
+<p class="field-help">プライバシーポリシーは別のタブで開きます。</p><p class="field-error" id="consent-error" hidden></p></div>
+<div id="form-error" class="form-error" role="alert" tabindex="-1" hidden><p id="form-error-text"></p><p>送信できない場合は、<a href="mailto:info@simplea.cc">info@simplea.cc</a>へメールでお問い合わせください。</p></div>
+<div class="form-actions"><button id="submit-button" type="submit" disabled>送信する</button><p id="sending-status" role="status"></p></div>
+<noscript><p class="no-script">フォームの送信にはJavaScriptが必要です。<a href="mailto:info@simplea.cc">info@simplea.cc</a>へメールでお問い合わせください。</p></noscript>
+</form>
+<section id="contact-success" class="contact-success" aria-labelledby="success-title" tabindex="-1" hidden><h2 id="success-title"><span>お問い合わせを</span><span>受け付けました。</span></h2><p>数営業日以内に返信いたします。<br>内容を確認のうえ、ご連絡いたします。</p></section>
+</div></div></main><footer class="footer"><div class="wrap">
+<div class="f-grid">
+<div><h4>事業</h4><ul><li><a href="ai-search.html">AI検索対策</a></li><li><span class="soon-item">音声AI日報 VoyLog（準備中）</span></li></ul></div>
+<div><h4>実績・ニュース</h4><ul><li><a href="index.html#results">実績</a></li><li><a href="index.html#news">ニュース</a></li><li><a href="https://note.com/simplea_aio" rel="noopener" target="_blank">note</a></li></ul></div>
+<div><h4>会社情報</h4><ul><li></li><li><a href="index.html#company">会社概要</a></li></ul></div>
+<div><h4>お問い合わせ</h4><ul><li><a href="index.html#contact">お問い合わせ</a></li><li><a href="mailto:info@simplea.cc">info@simplea.cc</a></li></ul></div>
+<div><ul><li><a href="privacy.html">プライバシーポリシー</a></li></ul></div>
+</div>
+<div class="f-bottom"><span class="en">© 2026 simpleA Inc.</span><span>会社の価値を、AIにも人にも伝わる情報に。</span></div>
+</div></footer><script>
+const toggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.nav');
+const business = document.querySelector('.business-nav');
+const businessToggle = document.querySelector('.business-toggle');
+const businessLink = document.querySelector('#business-link');
+const submenu = document.querySelector('.business-submenu');
+const mobile = matchMedia('(max-width:767px)');
+const reducedMotion = matchMedia('(prefers-reduced-motion:reduce)');
+let closeTimer;
+let slide;
+function setBusiness(open, animate = true) {
+  clearTimeout(closeTimer);
+  const from = submenu.getBoundingClientRect().height;
+  if (slide) slide.cancel();
+  business.classList.toggle('is-open', open);
+  businessToggle.setAttribute('aria-expanded', String(open));
+  submenu.inert = !open;
+  const to = open ? submenu.firstElementChild.getBoundingClientRect().height + (mobile.matches ? 0 : 2) : 0;
+  submenu.style.height = `${to}px`;
+  // Sansan uses jQuery slideDown/slideUp(400), whose default easing is swing.
+  if (animate && !reducedMotion.matches) {
+    const frames = Array.from({length: 21}, (_, i) => ({
+      height: `${from + (to - from) * (0.5 - Math.cos(Math.PI * i / 20) / 2)}px`,
+      offset: i / 20
+    }));
+    slide = submenu.animate(frames, {duration: 400, easing: 'linear'});
+  }
+}
+function closeNav() {
+  setBusiness(false, false);
+  toggle.setAttribute('aria-expanded', 'false');
+  nav.classList.remove('is-open');
+}
+toggle.addEventListener('click', () => {
+  const open = toggle.getAttribute('aria-expanded') !== 'true';
+  if (!open) closeNav();
+  else { toggle.setAttribute('aria-expanded', 'true'); nav.classList.add('is-open'); }
+});
+businessToggle.addEventListener('click', () => setBusiness(businessToggle.getAttribute('aria-expanded') !== 'true'));
+business.addEventListener('pointerenter', e => {
+  if (!mobile.matches && e.pointerType !== 'touch') setBusiness(true);
+});
+business.addEventListener('pointerleave', () => {
+  if (!mobile.matches && !business.contains(document.activeElement)) closeTimer = setTimeout(() => setBusiness(false), 120);
+});
+business.addEventListener('focusin', e => {
+  clearTimeout(closeTimer);
+  if (!mobile.matches && e.target === businessLink) setBusiness(true);
+});
+business.addEventListener('focusout', e => {
+  if (!business.contains(e.relatedTarget)) setBusiness(false);
+});
+nav.addEventListener('click', e => { if (e.target.closest('a')) closeNav(); });
+document.addEventListener('keydown', e => {
+  if (e.key !== 'Escape') return;
+  if (businessToggle.getAttribute('aria-expanded') === 'true') {
+    businessToggle.focus();
+    setBusiness(false);
+  } else if (toggle.getAttribute('aria-expanded') === 'true') {
+    closeNav();
+    toggle.focus();
+  }
+});
+document.addEventListener('pointerdown', e => {
+  if (!business.contains(e.target)) setBusiness(false);
+});
+mobile.addEventListener('change', closeNav);
+window.addEventListener('resize', () => {
+  if (businessToggle.getAttribute('aria-expanded') === 'true') setBusiness(true, false);
+});
+</script><script>
+(() => {
+  'use strict';
+  const form = document.getElementById('contact-form');
+  const button = document.getElementById('submit-button');
+  const started = document.getElementById('started-at');
+  const summary = document.getElementById('form-error');
+  const status = document.getElementById('sending-status');
+  const labels = {name:'お名前',company:'会社名・組織名',department:'部署・役職',email:'メールアドレス',phone:'電話番号',category:'お問い合わせの種別',message:'お問い合わせ内容',consent:'同意'};
+  let busy = false;
+  started.value = String(Date.now());
+  button.disabled = false;
+  function validate(field) {
+    let error = '';
+    const value = field.type === 'checkbox' ? field.checked : field.value.trim();
+    if (field.required && !value) error = field.name === 'consent' ? 'プライバシーポリシーへの同意が必要です。' : labels[field.name] + (field.tagName === 'SELECT' ? 'を選択してください。' : 'を入力してください。');
+    else if (field.type === 'email' && (field.validity.typeMismatch || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value))) error = 'メールアドレスを正しい形式で入力してください。';
+    else if (field.maxLength > 0 && Array.from(field.value).length > field.maxLength) error = field.maxLength + '文字以内で入力してください。';
+    const message = document.getElementById(field.name + '-error');
+    message.textContent = error;
+    message.hidden = !error;
+    field.setAttribute('aria-invalid', error ? 'true' : 'false');
+    return !error;
+  }
+  const fields = Object.keys(labels).map(name => form.elements.namedItem(name));
+  fields.forEach(field => {
+    field.addEventListener('blur', () => { if (field.value || field.hasAttribute('aria-invalid')) validate(field); });
+    field.addEventListener('input', () => { if (field.getAttribute('aria-invalid') === 'true') validate(field); });
+    field.addEventListener('change', () => { if (field.hasAttribute('aria-invalid')) validate(field); });
+  });
+  form.addEventListener('submit', async event => {
+    event.preventDefault();
+    if (busy) return;
+    summary.hidden = true;
+    const invalid = fields.filter(field => !validate(field));
+    if (invalid.length) { invalid[0].focus(); return; }
+    busy = true;
+    button.disabled = true;
+    button.textContent = '送信中…';
+    status.textContent = '送信しています。しばらくお待ちください。';
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 20000);
+    const body = new URLSearchParams(new FormData(form));
+    // Keep values visible on failure; prevent changes while this request is in flight.
+    fields.forEach(field => { field.disabled = true; });
+    try {
+      const response = await fetch(form.action, {method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body.toString(),mode:'cors',credentials:'omit',signal:controller.signal});
+      const result = await response.json();
+      if (!response.ok || result.ok !== true) throw new Error(typeof result.error === 'string' ? result.error : '送信できませんでした。時間をおいてお試しください。');
+      form.reset();
+      form.hidden = true;
+      const success = document.getElementById('contact-success');
+      success.hidden = false;
+      success.focus();
+      success.scrollIntoView({block:'start'});
+    } catch (error) {
+      document.getElementById('form-error-text').textContent = error.name === 'AbortError' || error instanceof TypeError || error instanceof SyntaxError
+        ? '送信結果を確認できませんでした。すでに受け付けている場合があります。再送信の前にメールでお問い合わせください。'
+        : error.message;
+      summary.hidden = false;
+      summary.focus();
+    } finally {
+      clearTimeout(timer);
+      busy = false;
+      fields.forEach(field => { field.disabled = false; });
+      button.disabled = false;
+      button.textContent = '送信する';
+      status.textContent = '';
+    }
+  });
+})();
+</script></body></html>

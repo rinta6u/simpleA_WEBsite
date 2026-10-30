@@ -118,3 +118,7 @@
  .support-flow li{grid-template-columns:1fr;gap:8px}
  .support-flow .flow-number{justify-content:flex-start;border-right:0}
 }
+
+.case-intro{font-size:18px;line-height:32px;margin-top:24px;max-width:46em}
+@media(max-width:767px){.case-intro{font-size:16px;line-height:28px}}
+.case-head h1 .heading-phrase{display:inline-block}

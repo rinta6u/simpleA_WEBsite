@@ -122,3 +122,4 @@
 .case-intro{font-size:18px;line-height:32px;margin-top:24px;max-width:46em}
 @media(max-width:767px){.case-intro{font-size:16px;line-height:28px}}
 .case-head h1 .heading-phrase{display:inline-block}
+.keep-ending{white-space:nowrap}
